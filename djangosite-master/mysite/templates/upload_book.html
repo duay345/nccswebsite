@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+  <u><h2>tyrfgbcd nbdg</h2></u><br>
+  <form method="post" id="myform" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy}} 
+    <p class="text-justify font-weight-normal font-italic" >*Before Submitting, Make Sure you Enter the Correct Information!</p>
+    <button type="submit" class="btn btn-outline-success btn-lg btn-block">Submit</button>
+  </form>
+{% endblock %}

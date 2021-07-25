@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  {% block content_header %}
+    <h2>Job Seeker Information</h2>
+    <p>
+     <a href="{% url 'home' %}" class="btn btn-primary">Apply For New Post</a>
+    </p>
+  {% endblock %}
+<div class="table-responsive">
+  <table class="table mb-0">
+    <thead>
+      <tr>
+      
+        <th>Name</th>
+       
+   
+      </tr>
+    </thead>
+    <tbody>
+      {% for book in books %}
+        <tr>
+          <td>
+            {% if book.cover %}
+            <img src="{{ mydoc.cover.url }}" alt="{{ mydoc.name }}" style="width:80px; height:100px;">
+            {% else %}
+              <span class="text-muted">No cover</span>
+            {% endif %}
+          </td>
+          <td>{{ mydoc.name }}</td>
+          
+        
+         <td>
+            <a href="{{ mydoc.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">{{mydoc.name}} Resume</a>
+          </td>
+          <td>
+            
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+{% endblock %}

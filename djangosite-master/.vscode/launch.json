@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "nccsApp:mysite.core.views.delete_book (python2.7)",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "",
+                "lambdaHandler": "mysite.core.views.delete_book"
+            },
+            "lambda": {
+                "runtime": "python2.7",
+                "payload": {},
+                "environmentVariables": {}
+            }
+        }
+    ]
+}
